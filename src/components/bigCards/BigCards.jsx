@@ -45,7 +45,7 @@ export const BigCards = () => {
         <div key={bigCard.id} className={styles.big_card}>
           <div className={styles.social_media}>
             <img src={bigCard.socialIcon} alt="" />
-            <p style={{ marginLeft: "5px" }}>{bigCard.username}</p>
+            <p>{bigCard.username}</p>
           </div>
           <div className={styles.followers}>
             <p style={{ fontSize: "35px" }}>{bigCard.followersNum}</p>
@@ -53,7 +53,7 @@ export const BigCards = () => {
           <p>{bigCard.text}</p>
           <div className={styles.up_down}>
             <img src={bigCard.icon} alt="" />
-            <p style={{ marginLeft: "5px" }}>{bigCard.iconText}</p>
+            <p>{bigCard.iconText}</p>
           </div>
         </div>
       ))}
