@@ -43,12 +43,18 @@ export const BigCards = () => {
     <div className={styles.big_cards_container}>
       {bigCardsArray.map((bigCard) => (
         <div key={bigCard.id} className={styles.big_card}>
-          <img src={bigCard.socialIcon} alt="" />
-          <p>{bigCard.username}</p>
-          <p>{bigCard.followersNum}</p>
+          <div className={styles.social_media}>
+            <img src={bigCard.socialIcon} alt="" />
+            <p style={{ marginLeft: "5px" }}>{bigCard.username}</p>
+          </div>
+          <div className={styles.followers}>
+            <p style={{ fontSize: "35px" }}>{bigCard.followersNum}</p>
+          </div>
           <p>{bigCard.text}</p>
-          <img src={bigCard.icon} alt="" />
-          <p>{bigCard.iconText}</p>
+          <div className={styles.up_down}>
+            <img src={bigCard.icon} alt="" />
+            <p style={{ marginLeft: "5px" }}>{bigCard.iconText}</p>
+          </div>
         </div>
       ))}
     </div>

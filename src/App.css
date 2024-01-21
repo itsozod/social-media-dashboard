@@ -2,3 +2,8 @@
   max-width: 100%;
   margin: 0 auto;
 }
+main {
+  min-height: 100vh;
+  /* background-color: lightblue; */
+  padding: 10px 50px;
+}

@@ -5,6 +5,38 @@
   margin: 0 auto;
 }
 .big_card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  align-self: normal;
   margin: 10px;
-  background-color: aquamarine;
+  background-color: lightgrey;
+  padding: 20px 70px;
+  border-radius: 12px;
+}
+.big_card:first-child {
+  border-top: 2px solid blue;
+}
+.big_card:nth-child(2) {
+  border-top: 2px solid blue;
+}
+.big_card:nth-child(3) {
+  border-top: 3px solid hsl(329, 70%, 58%);
+}
+.big_card:nth-child(4) {
+  border-top: 2px solid red;
+}
+.social_media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  margin-top: auto;
+}
+.big_card .up_down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
 }
