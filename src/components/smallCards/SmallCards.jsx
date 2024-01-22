@@ -67,12 +67,23 @@ const smallCardsArray = [
 ];
 
 export const SmallCards = () => {
-  return <div className={styles.small_cards_container}>
-    {smallCardsArray.map((smallCard) => (
+  return (
+    <div className={styles.small_cards_container}>
+      {smallCardsArray.map((smallCard) => (
         <div key={smallCard.id} className={styles.small_card}>
+          <div className={styles.view_number}>
             <p>{smallCard.view}</p>
+            <h1>{smallCard.number}</h1>
+          </div>
+          <div className={styles.icon_percentage}>
             <img src={smallCard.icon} alt="" />
+            <div className={styles.status}>
+              <img src={smallCard.status} alt="" />
+              <p>{smallCard.percentage}</p>
+            </div>
+          </div>
         </div>
-    ))}
-  </div>;
+      ))}
+    </div>
+  );
 };

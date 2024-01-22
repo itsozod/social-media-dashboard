@@ -5,6 +5,30 @@
   margin: 0 auto;
 }
 .small_card {
-    margin: 10px;
-    background-color: aqua;
+  margin: 10px;
+  background-color: lightgray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: normal;
+  padding: 10px 40px;
+}
+.view_number {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: start;
+  height: 100px;
+}
+.icon_percentage {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  height: 100px;
+}
+.status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
