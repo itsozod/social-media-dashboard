@@ -24,8 +24,9 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  align-items: center;
+  align-items: end;
   height: 100px;
+  width: 50px;
 }
 .status {
   display: flex;
