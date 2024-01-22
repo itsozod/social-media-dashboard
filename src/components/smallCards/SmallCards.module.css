@@ -1,6 +1,7 @@
 .full_container {
   max-width: 1200px;
   margin: 0 auto;
+  min-height: 100vh;
 }
 .overview {
   margin-top: 10px;

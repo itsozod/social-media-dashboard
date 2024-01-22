@@ -11,7 +11,8 @@
   flex-direction: column;
   align-self: normal;
   margin: 10px;
-  background-color: lightgrey;
+  /* background-color: hsl(228, 28%, 20%); */
+  background: lightgray;
   padding: 20px 70px;
   border-radius: 12px;
 }
@@ -26,6 +27,12 @@
 }
 .big_card:nth-child(4) {
   border-top: 2px solid red;
+}
+.followers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .social_media {
   display: flex;

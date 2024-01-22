@@ -1,13 +1,13 @@
 import styles from "./Header.module.css";
-import { useState } from "react";
+import { useDarkmode } from "../../hooks/UseDarkmode";
 
 export const Header = () => {
-  const [theme, setTheme] = useState(false);
+  const [theme, themeChange] = useDarkmode();
   return (
     <header
       className={styles.header}
       style={{
-        backgroundColor: theme ? "black" : "white",
+        background: theme ? "hsl(230, 17%, 14%)" : "white",
         transition: "0.3s",
         color: theme ? "white" : "black",
       }}
@@ -21,7 +21,8 @@ export const Header = () => {
           <p>Darkmode</p>
           <label className={styles.switch}>
             <input
-              onChange={() => setTheme((prevTheme) => !prevTheme)}
+              defaultChecked={theme}
+              onChange={() => themeChange()}
               type="checkbox"
               className={styles.inp_checkbox}
             ></input>

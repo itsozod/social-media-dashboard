@@ -82,7 +82,14 @@ export const SmallCards = () => {
                 <img src={smallCard.icon} alt="" />
                 <div className={styles.status}>
                   <img src={smallCard.status} alt="" />
-                  <p style={{ marginLeft: "5px" }}>{smallCard.percentage}</p>
+                  <p
+                    style={{
+                      marginLeft: "5px",
+                      color: smallCard.status === "/icon-up.svg" ? "green" : "red",
+                    }}
+                  >
+                    {smallCard.percentage}
+                  </p>
                 </div>
               </div>
             </div>

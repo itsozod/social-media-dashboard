@@ -48,12 +48,19 @@ export const BigCards = () => {
             <p>{bigCard.username}</p>
           </div>
           <div className={styles.followers}>
-            <p style={{ fontSize: "35px" }}>{bigCard.followersNum}</p>
+            <p style={{ fontSize: "40px" }}>{bigCard.followersNum}</p>
+            <p>{bigCard.text}</p>
           </div>
-          <p>{bigCard.text}</p>
+          
           <div className={styles.up_down}>
             <img src={bigCard.icon} alt="" />
-            <p>{bigCard.iconText}</p>
+            <p
+              style={{
+                color: bigCard.icon === "/icon-up.svg" ? "green" : "red",
+              }}
+            >
+              {bigCard.iconText}
+            </p>
           </div>
         </div>
       ))}
