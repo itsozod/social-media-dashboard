@@ -1,4 +1,5 @@
 import styles from "./SmallCards.module.css";
+import { useDarkmode } from "../../hooks/UseDarkmode";
 const smallCardsArray = [
   {
     id: 1,
@@ -67,14 +68,33 @@ const smallCardsArray = [
 ];
 
 export const SmallCards = () => {
+  const [theme] = useDarkmode();
   return (
     <>
       <div className={styles.full_container}>
-        <h1 className={styles.overview}>Overview - Today</h1>
+        <h2
+          className={styles.overview}
+          style={{ color: theme ? "white" : "black" }}
+        >
+          Overview - Today
+        </h2>
         <div className={styles.small_cards_container}>
           {smallCardsArray.map((smallCard) => (
-            <div key={smallCard.id} className={styles.small_card}>
-              <div className={styles.view_number}>
+            <div
+              key={smallCard.id}
+              className={styles.small_card}
+              style={{
+                backgroundColor: theme ? "hsl(228, 28%, 20%)" : "lightgray",
+                transition: "0.3s",
+              }}
+            >
+              <div
+                className={styles.view_number}
+                style={{
+                  color: theme ? "white" : "black",
+                  transition: "0.3s",
+                }}
+              >
                 <p>{smallCard.view}</p>
                 <h1>{smallCard.number}</h1>
               </div>
@@ -85,7 +105,10 @@ export const SmallCards = () => {
                   <p
                     style={{
                       marginLeft: "5px",
-                      color: smallCard.status === "/icon-up.svg" ? "green" : "red",
+                      color:
+                        smallCard.status === "/icon-up.svg"
+                          ? "hsl(163, 72%, 41%)"
+                          : "hsl(356, 69%, 56%)",
                     }}
                   >
                     {smallCard.percentage}

@@ -1,3 +1,4 @@
+import { useDarkmode } from "../../hooks/UseDarkmode";
 import styles from "./BigCards.module.css";
 const bigCardsArray = [
   {
@@ -39,24 +40,47 @@ const bigCardsArray = [
 ];
 
 export const BigCards = () => {
+  const [theme] = useDarkmode();
   return (
     <div className={styles.big_cards_container}>
       {bigCardsArray.map((bigCard) => (
-        <div key={bigCard.id} className={styles.big_card}>
-          <div className={styles.social_media}>
+        <div
+          key={bigCard.id}
+          className={styles.big_card}
+          style={{
+            backgroundColor: theme ? "hsl(228, 28%, 20%)" : "lightgray",
+            transition: "0.3s",
+          }}
+        >
+          <div
+            className={styles.social_media}
+            style={{
+              color: theme ? "white" : "black",
+              transition: "0.3s",
+            }}
+          >
             <img src={bigCard.socialIcon} alt="" />
             <p>{bigCard.username}</p>
           </div>
-          <div className={styles.followers}>
+          <div
+            className={styles.followers}
+            style={{
+              color: theme ? "white" : "black",
+              transition: "0.3s",
+            }}
+          >
             <p style={{ fontSize: "40px" }}>{bigCard.followersNum}</p>
             <p>{bigCard.text}</p>
           </div>
-          
+
           <div className={styles.up_down}>
             <img src={bigCard.icon} alt="" />
             <p
               style={{
-                color: bigCard.icon === "/icon-up.svg" ? "green" : "red",
+                color:
+                  bigCard.icon === "/icon-up.svg"
+                    ? "hsl(163, 72%, 41%)"
+                    : "hsl(356, 69%, 56%)",
               }}
             >
               {bigCard.iconText}
